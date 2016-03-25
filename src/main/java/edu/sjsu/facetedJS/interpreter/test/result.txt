@@ -1,0 +1,122 @@
+/************ TEST CASE 1 ***************/
+writing to bank.com :
+Your credit card (1234-2345-4567-0987) payment was successful
+writing to bank.com :
+Good standing : true
+---- injection----
+writing to evil.com :
+creditCard=0000-0000-0000-0000
+writing to evil.com :
+goodStanding=false
+
+
+/************ TEST CASE 2 ***************/
+ out = 
+< 0x402 ? < 0x403 ? < 0x404 ? 1 : 2 > : < 0x404 ? 3 : 4 > > : < 0x403 ? < 0x404 ? 5 : 6 > : < 0x404 ? 7 : 8 > > >
+ out = 
+< 0x402 ? < 0x403 ? -1 : < 0x404 ? 3 : 4 > > : < 0x403 ? < 0x404 ? 5 : 6 > : < 0x404 ? 7 : 8 > > >
+ out = 
+< 0x402 ? -2 : < 0x403 ? -2 : < 0x404 ? 7 : 8 > > >
+
+
+/************ TEST CASE 3 ***************/
+< 0x405 ? 0 : 10 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 2 : 12 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 1 : 11 >
+< 0x405 ? 0 : 10 >
+< 0x405 ? 1 : 21 >
+< 0x405 ? 0 : 10 >
+< 0x405 ? -1 : 19 >
+< 0x405 ? 0 : 10 >
+
+
+/************ TEST CASE 4 ***************/
+< 0x406 ? < 0x407 ? < 0x408 ? 14 : 15 > : < 0x408 ? 16 : 17 > > : < 0x407 ? < 0x408 ? 18 : 19 > : < 0x408 ? 21 : 22 > > >
+< 0x406 ? < 0x407 ? < 0x408 ? -22 : -26 > : < 0x408 ? -28 : -33 > > : < 0x407 ? < 0x408 ? -21 : -25 > : < 0x408 ? -27 : -32 > > >
+< 0x406 ? 1 : < 0x407 ? < 0x408 ? 2 : 1 > : 2 > >
+
+
+/************ TEST CASE 5 ***************/
+sum = 
+< 0x409 ? 55 : 6 >
+
+
+/************ TEST CASE 6 ***************/
+sum = 
+< 0x40a ? 55 : 6 >
+
+
+/************ TEST CASE 7 ***************/
+sum = 
+< 0x40c ? < 0x40b ? 100 : 50 > : < 0x40b ? 50 : 25 > >
+
+
+/************ TEST CASE 8 ***************/
+return = 
+ERROR: Undefined function 
+< 0x40d ? < 0x40e ? < 0x40f ? 11 : 8 > : 1 > : undefined >
+
+
+/************ TEST CASE 9 ***************/
+sum of the list : [3, 4, 5, 6, 7]
+2D array to list : 1 2 3 4 2 3 4 5 6 7 3 4 5 6
+
+
+/************ TEST CASE 10 ***************/
+{name: "San Jose State University", students: [{name: "Alice", age: 20}, {name: "Bob", age: 22}, {name: "Charle", age: 19}, {name: "David", age: 30}], tel: 4081231234}
+School    : San Jose State University
+Number    : 4081231234
+Address   : 1 Washington Sq, San Jose, CA 95192
+Student   : 
+ - Alice (age: 20)
+ - Bob (age: 22)
+ - Charle (age: 19)
+ - David (age: 30)
+
+
+/************ TEST CASE 11 ***************/
+writing to undefined :
+[1, -2, -3, 11, -7, 101]
+writing to undefined :
+[1, -2, -3, 11, -7, 101]
+writing to undefined :
+[1, -2, -3, 11, -7, 101]
+writing to undefined :
+[2, 1, 0, -1, -2]
+writing to undefined :
+[1, 0, 0, 11, 0, 101]
+writing to undefined :
+[2, 1, 0, 0, 0]
+
+
+/************ TEST CASE 12 ***************/
+writing to public :
+{hp: 170, model: "accord", brand: "Honda"}
+writing to ford.com :
+{hp: 170, model: "accord", brand: "Honda"}
+
+writing to public :
+{hp: 170, model: "accord", brand: "Honda"}
+writing to ford.com :
+{hp: 200, model: "Focus", brand: "Ford"}
+
+
+/************ TEST CASE 13 ***************/
+password = 
+< 0x414 ? "secret" : undefined >
+writing to public :
+undefined
+writing to login-system.com :
+secret
+writing to public :
+5EBE2294ECD0E0F08EAB7690D2A6EE69
+writing to login-system.com :
+5EBE2294ECD0E0F08EAB7690D2A6EE69
+
+
+TOTAL EXEUCTION TIME : 2.834027436 sec

@@ -1,0 +1,20 @@
+{
+  "name": "FacetedInterp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wing Cheong Tam",
+  "license": "SJSU",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
+  },
+  "devDependencies": {
+    "grunt-antlr4": "^0.1.5",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-properties-reader": "^0.1.3"
+  }
+}
